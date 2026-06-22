@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
+  console.log("main file hit")
   res.send("Hello from how anand new change Node.js!");
 });
 
