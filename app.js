@@ -1,16 +1,21 @@
+require("dotenv").config();
+
 const express = require("express");
-require("dotenv").config()
+
+const connectDB = require("./config/db");
+
 const app = express();
 
+connectDB();
 
-app.get("/", (req, res) => {
-  console.log("main file hit",)
+app.use(express.json());
 
-  res.send("Hello from how kkkanand new change Node.js!");
-});
-console.log(",,,,,,,,,,,,,,",process.env.PORT)
-const PORT = 3000;
+require("./listeners/emailListener");
+require("./listeners/smsListener");
+require("./listeners/analyticsListener");
 
-app.listen(PORT, () => {
-  console.log(`Server running at 3000 port ${PORT}`);
+app.use("/api/auth", require("./routes/authRoutes"));
+
+app.listen(5000, () => {
+  console.log("Server Running");
 });

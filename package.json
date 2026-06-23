@@ -11,8 +11,21 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anand-yolo/node-project-01.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anand-yolo/node-project-01/issues"
+  },
+  "homepage": "https://github.com/anand-yolo/node-project-01#readme",
+  "devDependencies": {
     "nodemon": "^3.1.14"
   }
 }
