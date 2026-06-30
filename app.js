@@ -10,9 +10,9 @@ connectDB();
 
 app.use(express.json());
 
-require("./listeners/emailListener");
-require("./listeners/smsListener");
-require("./listeners/analyticsListener");
+// require("./listeners/emailListener");
+// require("./listeners/smsListener");
+// require("./listeners/analyticsListener");
 
 app.use("/api/auth", require("./routes/authRoutes"));
 
