@@ -11,7 +11,8 @@ const app = express();
 
 app.use(express.json());
 app.get("/test",async (req,res)=>{
-  res.json("hello from server")
+  console.log("mmmmmmmmmmmmmmmmmmmmmmm")
+  res.send("hello from server")
 })
 
 require("./listeners/emailListener");
@@ -20,6 +21,6 @@ require("./listeners/analyticsListener");
 
 app.use("/api/auth", require("./routes/authRoutes"));
 
-app.listen(5000, () => {
+app.listen(3000, () => {
   console.log("Server Running");
 });
