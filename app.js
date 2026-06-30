@@ -1,15 +1,18 @@
 
 const express = require("express")
 require('dotenv').config({ quiet: true });
-const connectDB = require("./config/db");
+// const connectDB = require("./config/db");
 const PORT = process.env.PORT
-console.log("PORT.............",{PORT,connectDB})
+console.log("PORT.............",{PORT})
 
 const app = express();
 
-connectDB();
+// connectDB();
 
 app.use(express.json());
+app.get("/test",async (req,res)=>{
+  res.json("hello from server")
+})
 
 require("./listeners/emailListener");
 require("./listeners/smsListener");
