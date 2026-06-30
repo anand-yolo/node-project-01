@@ -2,10 +2,14 @@
 const express = require("express")
 require('dotenv').config({ quiet: true });
 // const connectDB = require("./config/db");
+const cron = require("node-cron")
 const PORT = process.env.PORT
 console.log("PORT.............",{PORT})
 
 const app = express();
+cron.schedule("*/10 * * * * *",()=>{
+  console.log("i am in crone")
+})
 
 // connectDB();
 
