@@ -2,11 +2,11 @@ const User = require("../models/User");
 const eventBus = require("../events/eventBus");
 
 const loginUser = async (email, password) => {
-    // await User.create({
-    //     email:"john@gmail.com",
-    //     password:"123456",
-    //     phone:"98737337737"
-    // })
+    await User.create({
+        email:"john@gmail.com",
+        password:"123456",
+        phone:"98737337737"
+    })
   const user = await User.findOne({ email });
 
   if (!user) {

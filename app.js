@@ -12,6 +12,7 @@ cron.schedule("*/10 * * * * *",()=>{
 })
 
 connectDB();
+console.log("test>>>>>>>>>>>>>>>")
 
 app.use(express.json());
 app.get("/test",async (req,res)=>{
