@@ -13,6 +13,7 @@ cron.schedule("*/10 * * * * *",()=>{
 
 connectDB();
 console.log("test>>>>>>>>>>>>>>>kkk")
+console.log("cicd complete>>>>>>>>>>>>>>>.")
 
 app.use(express.json());
 app.get("/test",async (req,res)=>{
