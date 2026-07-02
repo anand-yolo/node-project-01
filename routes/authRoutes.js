@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express.Router();
+const multer = require("multer");
 
-const { loginUser } = require("../service/authService");
+const upload = require("../midlware/multer")
+const { loginUser ,createUser} = require("../service/authService");
 
 router.post("/login", async (req, res) => {
   try {
@@ -17,5 +19,6 @@ router.post("/login", async (req, res) => {
     });
   }
 });
+router.post("/create",upload.single("file"),createUser)
 
 module.exports = router;
